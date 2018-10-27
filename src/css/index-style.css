@@ -1,0 +1,18 @@
+/* Make the chart container fill the page using CSS. */
+#contentdiv {
+  position: fixed;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+}
+
+.searchIcon {
+  r: 60px;
+  cx: 200px;
+  cy: 500px;
+}
+
+#searchIconName { cy: 700px; }
+#searchIconLocation { cy: 500px; }
+#searchIconIndustry { cy: 300px; }

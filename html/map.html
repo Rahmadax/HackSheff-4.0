@@ -33,21 +33,22 @@
         </nav>
 
         <div id="side-nav">
-            <div class="form-group">
+            <!-- <div class="form-group">
                 <label>Search Map</label>
-                <input id="map-search" type="text" class="form-control" placeholder="Search...">
-            </div>
+                <input id="map-search-text" type="text" class="form-control" placeholder="Search...">
+            </div> -->
             <div class="form-group">
-                <label for="map-search-type">Search Criteria</label>
+                <label for="map-search-type">Business Type</label>
                 <select class="form-control" id="map-search-type">
-                    <option value="CompanyName">Company Name</option>
-                    <option value="CompanyNumber">Company Number</option>
-                    <option value="RegAddressPOBox">Postcode</option>
-                    <option value="RegAddressLine1"></option>
                 </select>
             </div>
             <div class="form-group">
-                <button type="button" class="btn btn-primary">Search</button>
+                <label for="map-search-type">City</label>
+                <select class="form-control" id="map-search-city">
+                </select>
+            </div>
+            <div class="form-group">
+                <button id="map-search" type="button" class="btn btn-primary">Search</button>
             </div>
         </div>
 

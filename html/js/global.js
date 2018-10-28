@@ -13,11 +13,13 @@ $(document).ready(function () {
             method: "POST",
             url: "https://us-central1-my-project-1510348200658.cloudfunctions.net/get-companies",
             dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify(data),
             success: function(data) {
-                alert("res")
+                console.log(data)
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) {
-                alert("Status: " + textStatus); alert("Error: " + errorThrown)
+                alert("Error: " + errorThrown + " - " + textStatus)
             }
         })
     })

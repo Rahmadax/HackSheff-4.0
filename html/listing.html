@@ -27,8 +27,15 @@
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
-                    <input id="top-search-text" class="form-control mr-sm-2" type="search" placeholder="Search by name..." aria-label="Search">
-                    <button id="top-search" class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+                    <input id="top-search-text" class="form-control mr-sm-2" type="search" placeholder="Enter search term..." aria-label="Search">
+                    <select id="top-search-type" class="form-control mr-sm-2">
+                        <option value="CompanyName">Company Name</option>
+                        <option value="CompanyNumber">Company Number</option>
+                        <option value="RegAddressLine1">Address Line 1</option>
+                        <option value="RegAddressPostTown">Town/City</option>
+                        <option value="RegAddressCounty">County</option>
+                    </select>
+                    <button id="top-search" class="btn btn-outline-primary my-2 my-sm-0" type="button">Search</button>
                 </form>
             </div>
         </nav>

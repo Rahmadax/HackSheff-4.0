@@ -21,9 +21,15 @@ $(document).ready(function() {
         data: JSON.stringify(data),
         success: function(data) {
             buffer = ""
-            for (var i=0; i<data.length; i++) {
+
+            var maxNum = 100
+            if (data.length <= 100) {
+                maxNum = data.length
+            }
+
+            for (var i=0; i<maxNum; i++) {
                 buffer += "<tr>"
-                buffer += "<td>" + data[i].CompanyName + "</td>"
+                buffer += "<td><a href='" + data[i].URI + "' target='_blank'>" + data[i].CompanyName + "</a></td>"
                 buffer += "<td>" + data[i].RegAddressPostCode + "</td>"
                 buffer += "<td>" + data[i].RegAddressPostTown + "</td>"
             }

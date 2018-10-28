@@ -49,6 +49,35 @@ $(document).ready(function() {
         })
     })
 
+    $("#side-nav-search").click(function() {
+        deleteMarkers()
+
+        var searchTerm = $("#side-nav-name").val()
+
+        var data = [
+            {
+                "field": "CompanyName",
+                "value": searchTerm
+            }
+        ]
+
+        $.ajax({
+            method: "POST",
+            url: "https://us-central1-my-project-1510348200658.cloudfunctions.net/get-companies-slim-custom",
+            dataType: "json",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function(data) {
+                for (var i=0; i<data.length; i++) {
+                    placePostCodeMarker(data[i].RegAddressPostCode)
+                }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) {
+                alert("Error: " + errorThrown + " - " + textStatus)
+            }
+        })
+    })
+
     $.get("https://europe-west1-my-project-1510348200658.cloudfunctions.net/get-metadata", function(res) {
         var buffer = ""
         for (var i=0; i<res.length; i++) {
